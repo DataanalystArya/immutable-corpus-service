@@ -750,7 +750,7 @@ def build_corpus():
     validation_public, validation_bytes = serialize_rows(
         final_validation
     )
-    test_public, test_bytes = serialize_rows(test_rows=final_test)
+    test_public, test_bytes = serialize_rows(final_test)
 
     # SHA-256 of exact UTF-8 JSONL bytes.
     train_digest = hashlib.sha256(train_bytes).hexdigest()
